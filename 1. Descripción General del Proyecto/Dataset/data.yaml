@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['escuela', 'hospital', 'panaderia', 'parque', 'supermercado']
+
+roboflow:
+  workspace: julios-workspace-gq2sn
+  project: educabasica
+  version: 1
+  license: Private
+  url: https://app.roboflow.com/julios-workspace-gq2sn/educabasica/1

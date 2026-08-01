@@ -1,0 +1,314 @@
+{
+  "hospital": {
+    "id": "hospital",
+    "nombre": "Hospital",
+    "categoria": "Entorno",
+    "descripcion": "Lugar donde cuidan nuestra salud.",
+    "microhistoria": [
+      "Tomás tenía fiebre.",
+      "Su mamá lo llevó al hospital.",
+      "El doctor lo revisó y le dio un medicamento.",
+      "Tomás se sintió mejor."
+    ],
+    "actividades": {
+      "adivinanza": {
+        "tipo": "respuesta_corta",
+        "pregunta": "Cuando estoy enfermo voy a un lugar donde me cuidan médicos y enfermeras. ¿Qué lugar es?",
+        "respuesta_correcta": "hospital",
+        "respuestas_aceptadas": [
+          "hospital",
+          "el hospital"
+        ],
+        "retroalimentacion_correcta": "¡Muy bien! Es el hospital, donde cuidan nuestra salud.",
+        "retroalimentacion_incorrecta": "Escucha nuevamente. Es el lugar donde trabajan médicos y enfermeras."
+      },
+      "verdadero_falso": {
+        "tipo": "verdadero_falso",
+        "enunciado": "En el hospital cuidan a las personas enfermas.",
+        "respuesta_correcta": true,
+        "retroalimentacion_correcta": "¡Correcto! En el hospital cuidan a las personas enfermas.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es verdadero."
+      },
+      "respuesta_oral": {
+        "tipo": "respuesta_abierta",
+        "pregunta": "¿Quiénes trabajan en el hospital?",
+        "respuestas_aceptadas": [
+          "médicos",
+          "medicos",
+          "doctores",
+          "doctor",
+          "enfermeras",
+          "enfermeros",
+          "médicos y enfermeras",
+          "medicos y enfermeras",
+          "doctores y enfermeras"
+        ],
+        "retroalimentacion_correcta": "¡Muy bien! En el hospital trabajan médicos, enfermeras y otros profesionales de la salud.",
+        "retroalimentacion_incorrecta": "Puedes responder: médicos y enfermeras."
+      },
+      "opcion_multiple": {
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Para qué sirve el hospital?",
+        "opciones": {
+          "A": "Para cuidar a las personas enfermas.",
+          "B": "Para comprar juguetes.",
+          "C": "Para ver películas."
+        },
+        "respuesta_correcta": "A",
+        "retroalimentacion_correcta": "¡Excelente! El hospital sirve para cuidar a las personas enfermas.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es la opción A."
+      }
+    }
+  },
+
+  "supermercado": {
+    "id": "supermercado",
+    "nombre": "Supermercado",
+    "categoria": "Entorno",
+    "descripcion": "Lugar donde compramos lo que necesitamos.",
+    "microhistoria": [
+      "Luis fue con su mamá al supermercado.",
+      "Tomó un carrito.",
+      "Compraron frutas, pan, leche y jugo.",
+      "Pagaron en la caja."
+    ],
+    "actividades": {
+      "adivinanza": {
+        "tipo": "respuesta_corta",
+        "pregunta": "Voy con mi familia a comprar alimentos y muchas cosas más. Hay frutas, verduras, leche y juguetes. ¿Qué lugar es?",
+        "respuesta_correcta": "supermercado",
+        "respuestas_aceptadas": [
+          "supermercado",
+          "el supermercado"
+        ],
+        "retroalimentacion_correcta": "¡Correcto! Es el supermercado.",
+        "retroalimentacion_incorrecta": "Es el lugar donde compramos alimentos y otros productos."
+      },
+      "verdadero_falso": {
+        "tipo": "verdadero_falso",
+        "enunciado": "En el supermercado podemos comprar alimentos que necesitamos.",
+        "respuesta_correcta": true,
+        "retroalimentacion_correcta": "¡Muy bien! En el supermercado compramos alimentos.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es verdadero."
+      },
+      "respuesta_oral": {
+        "tipo": "respuesta_abierta",
+        "pregunta": "¿Dónde vas a comprar alimentos con tu mamá?",
+        "respuestas_aceptadas": [
+          "supermercado",
+          "al supermercado",
+          "en el supermercado",
+          "mercado",
+          "al mercado"
+        ],
+        "retroalimentacion_correcta": "¡Muy bien! Podemos comprar alimentos en el supermercado.",
+        "retroalimentacion_incorrecta": "Puedes responder: al supermercado."
+      },
+      "opcion_multiple": {
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Para qué sirve el supermercado?",
+        "opciones": {
+          "A": "Para comprar alimentos.",
+          "B": "Para curar enfermos.",
+          "C": "Para aprender a leer."
+        },
+        "respuesta_correcta": "A",
+        "retroalimentacion_correcta": "¡Excelente! En el supermercado compramos alimentos.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es la opción A."
+      }
+    }
+  },
+
+  "parque": {
+    "id": "parque",
+    "nombre": "Parque",
+    "categoria": "Entorno",
+    "descripcion": "Lugar donde jugamos y disfrutamos al aire libre.",
+    "microhistoria": [
+      "Luis fue al parque.",
+      "Jugó con sus amigos.",
+      "Corrió, se rió y disfrutó.",
+      "Regresó feliz a casa."
+    ],
+    "actividades": {
+      "adivinanza": {
+        "tipo": "respuesta_corta",
+        "pregunta": "Estoy al aire libre. Hay árboles y flores. Vamos a jugar y a divertirnos. ¿Qué lugar es?",
+        "respuesta_correcta": "parque",
+        "respuestas_aceptadas": [
+          "parque",
+          "el parque"
+        ],
+        "retroalimentacion_correcta": "¡Correcto! Es el parque.",
+        "retroalimentacion_incorrecta": "Es un lugar al aire libre con árboles, juegos y flores."
+      },
+      "verdadero_falso": {
+        "tipo": "verdadero_falso",
+        "enunciado": "En el parque jugamos y disfrutamos al aire libre.",
+        "respuesta_correcta": true,
+        "retroalimentacion_correcta": "¡Muy bien! En el parque podemos jugar al aire libre.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es verdadero."
+      },
+      "respuesta_oral": {
+        "tipo": "respuesta_abierta",
+        "pregunta": "¿Qué te gusta hacer en el parque?",
+        "respuestas_aceptadas": [
+          "jugar",
+          "correr",
+          "caminar",
+          "jugar fútbol",
+          "jugar futbol",
+          "jugar con mis amigos",
+          "montar bicicleta",
+          "columpiarme",
+          "divertirme"
+        ],
+        "retroalimentacion_correcta": "¡Qué divertido! En el parque podemos realizar muchas actividades.",
+        "retroalimentacion_incorrecta": "Puedes responder, por ejemplo: jugar, correr o caminar."
+      },
+      "opcion_multiple": {
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Para qué sirve el parque?",
+        "opciones": {
+          "A": "Para jugar y divertirnos.",
+          "B": "Para comprar alimentos.",
+          "C": "Para curar enfermos."
+        },
+        "respuesta_correcta": "A",
+        "retroalimentacion_correcta": "¡Excelente! El parque sirve para jugar y divertirnos.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es la opción A."
+      }
+    }
+  },
+
+  "panaderia": {
+    "id": "panaderia",
+    "nombre": "Panadería",
+    "categoria": "Entorno",
+    "descripcion": "Lugar donde se prepara y vende el pan y otros productos deliciosos.",
+    "microhistoria": [
+      "El panadero trabaja con alegría cada día.",
+      "Prepara pan delicioso para todos los niños.",
+      "¡Qué rico está el pan!"
+    ],
+    "actividades": {
+      "adivinanza": {
+        "tipo": "respuesta_corta",
+        "pregunta": "Huele rico y calentito, se hace con harina y amor, aquí venden pan y pastelitos. ¿Qué lugar es?",
+        "respuesta_correcta": "panadería",
+        "respuestas_aceptadas": [
+          "panadería",
+          "panaderia",
+          "la panadería",
+          "la panaderia"
+        ],
+        "retroalimentacion_correcta": "¡Correcto! Es la panadería.",
+        "retroalimentacion_incorrecta": "Es el lugar donde preparan y venden pan."
+      },
+      "verdadero_falso": {
+        "tipo": "verdadero_falso_multiple",
+        "enunciados": [
+          {
+            "texto": "En la panadería se prepara y vende pan.",
+            "respuesta_correcta": true
+          },
+          {
+            "texto": "En la panadería se curan enfermos.",
+            "respuesta_correcta": false
+          }
+        ],
+        "retroalimentacion_correcta": "¡Muy bien! En la panadería se prepara y vende pan, pero no se curan enfermos.",
+        "retroalimentacion_incorrecta": "Recuerda: en la panadería se prepara y vende pan."
+      },
+      "respuesta_oral": {
+        "tipo": "respuesta_abierta",
+        "pregunta": "¿Qué compras en la panadería?",
+        "respuestas_aceptadas": [
+          "pan",
+          "pasteles",
+          "pastel",
+          "pan y pasteles",
+          "panes",
+          "galletas",
+          "dulces",
+          "pastelitos"
+        ],
+        "retroalimentacion_correcta": "¡Muy bien! En la panadería podemos comprar pan y otros productos.",
+        "retroalimentacion_incorrecta": "Puedes responder: pan."
+      },
+      "opcion_multiple": {
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Qué hace el panadero?",
+        "opciones": {
+          "A": "Prepara y vende pan.",
+          "B": "Enseña a los niños.",
+          "C": "Juega en el parque."
+        },
+        "respuesta_correcta": "A",
+        "retroalimentacion_correcta": "¡Excelente! El panadero prepara y vende pan.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es la opción A."
+      }
+    }
+  },
+
+  "escuela": {
+    "id": "escuela",
+    "nombre": "Escuela",
+    "categoria": "Entorno",
+    "descripcion": "Lugar donde aprendemos y hacemos amigos.",
+    "microhistoria": [
+      "Ana fue a la escuela.",
+      "Saludó a su maestra.",
+      "Aprendió una palabra nueva.",
+      "Regresó feliz a casa."
+    ],
+    "actividades": {
+      "adivinanza": {
+        "tipo": "respuesta_corta",
+        "pregunta": "Voy todos los días. Aprendo con mi maestra. Juego con mis compañeros. ¿Qué lugar es?",
+        "respuesta_correcta": "escuela",
+        "respuestas_aceptadas": [
+          "escuela",
+          "la escuela"
+        ],
+        "retroalimentacion_correcta": "¡Correcto! Es la escuela.",
+        "retroalimentacion_incorrecta": "Es el lugar donde aprendemos con la maestra y nuestros compañeros."
+      },
+      "verdadero_falso": {
+        "tipo": "verdadero_falso",
+        "enunciado": "En la escuela aprendemos cosas nuevas.",
+        "respuesta_correcta": true,
+        "retroalimentacion_correcta": "¡Muy bien! En la escuela aprendemos cosas nuevas.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es verdadero."
+      },
+      "respuesta_oral": {
+        "tipo": "respuesta_abierta",
+        "pregunta": "¿Qué haces cuando vas a la escuela?",
+        "respuestas_aceptadas": [
+          "aprendo",
+          "estudio",
+          "leo",
+          "escribo",
+          "juego",
+          "aprendo cosas nuevas",
+          "estudio con mi maestra",
+          "juego con mis compañeros"
+        ],
+        "retroalimentacion_correcta": "¡Muy bien! En la escuela aprendemos, estudiamos y compartimos con nuestros compañeros.",
+        "retroalimentacion_incorrecta": "Puedes responder: aprendo y estudio."
+      },
+      "opcion_multiple": {
+        "tipo": "opcion_multiple",
+        "pregunta": "¿Para qué sirve la escuela?",
+        "opciones": {
+          "A": "Para aprender.",
+          "B": "Para comprar alimentos.",
+          "C": "Para curar enfermos."
+        },
+        "respuesta_correcta": "A",
+        "retroalimentacion_correcta": "¡Excelente! La escuela sirve para aprender.",
+        "retroalimentacion_incorrecta": "La respuesta correcta es la opción A."
+      }
+    }
+  }
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Robot Educativo BúhoBot</title>
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='estilos.css') }}?v=20260730-final-reiniciar-estadisticas-1"
+    >
+</head>
+<body>
+    <main class="contenedor">
+        <header class="encabezado">
+            <div>
+                <p class="etiqueta">Plataforma educativa</p>
+                <h1>Robot Educativo BúhoBot</h1>
+                <p class="subtitulo">
+                    Aprendizaje mediante tarjetas, historias y actividades interactivas con la voz
+                </p>
+            </div>
+
+            <div id="indicador" class="indicador detenido">
+                BúhoBot está listo
+            </div>
+        </header>
+
+        <section class="panel-principal">
+            <div class="panel-escenario">
+                <div class="titulo-panel">
+                    <h2 id="tituloEscenario">BúhoBot</h2>
+                    <span id="estadoCamara">Listo para comenzar</span>
+                </div>
+
+                <div class="escenario">
+                    <div id="vistaCamara" class="vista oculto">
+                        <img
+                            src="{{ url_for('video_feed') }}"
+                            alt="Cámara de BúhoBot"
+                            class="video"
+                        >
+
+                        <div class="mensaje-camara">
+                            <strong id="mensajeCamaraTitulo">
+                                Buscando una tarjeta
+                            </strong>
+                            <span id="mensajeCamaraTexto">
+                                Mantenla completa y sin reflejos.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div id="vistaCentral" class="vista vista-central">
+                        <img
+                            id="imagenBuhobot"
+                            src="{{ url_for('static', filename='saludo.png') }}?v=20260730-final-reiniciar-estadisticas-1"
+                            alt="BúhoBot"
+                            class="imagen-buhobot imagen-estado"
+                        >
+
+                        <div class="contenido-central">
+                            <h2 id="tituloCentral">
+                                ¡Hola! Soy BúhoBot
+                            </h2>
+
+                            <p id="mensajeCentral">
+                                Aprenderemos juntos mediante tarjetas,
+                                historias y actividades con tu voz.
+                            </p>
+
+                            <div
+                                id="medallasResultado"
+                                class="medallas-resultado oculto"
+                                aria-label="Medallas obtenidas"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="panel-controles">
+                <h2>Configuración</h2>
+
+                <label for="cantidadPreguntas">
+                    Cantidad de preguntas
+                </label>
+
+                <select id="cantidadPreguntas">
+                    <option value="1">1 pregunta</option>
+                    <option value="2">2 preguntas</option>
+                    <option value="3">3 preguntas</option>
+                    <option value="4">4 preguntas</option>
+                </select>
+
+                <button id="botonIniciar" class="boton boton-iniciar">
+                    Iniciar actividad
+                </button>
+
+                <button
+                    id="botonNuevaTarjeta"
+                    class="boton boton-nueva oculto"
+                >
+                    Nueva tarjeta
+                </button>
+
+                <button
+                    id="botonDetener"
+                    class="boton boton-detener"
+                    disabled
+                >
+                    Detener actividad
+                </button>
+
+                <button
+                    id="botonEstadisticas"
+                    class="boton boton-estadisticas"
+                >
+                    Ver resultados y estadísticas
+                </button>
+
+                <div class="estado-robot">
+                    <span>Estado actual</span>
+                    <strong id="textoEstado">
+                        BúhoBot está listo
+                    </strong>
+                    <p id="detalleEstado">
+                        Presiona Iniciar actividad y escucha las indicaciones de BúhoBot.
+                    </p>
+                </div>
+
+                <div class="progreso-contenedor">
+                    <div class="progreso-cabecera">
+                        <span>Progreso</span>
+                        <strong id="porcentajeProgreso">0 %</strong>
+                    </div>
+
+                    <div
+                        class="barra-fondo"
+                        id="barraAccesible"
+                        role="progressbar"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="0"
+                    >
+                        <div
+                            id="barraProgreso"
+                            class="barra-progreso"
+                        ></div>
+                    </div>
+
+                    <p id="mensajeProceso">
+                        BúhoBot está listo.
+                    </p>
+                </div>
+            </aside>
+        </section>
+
+        <section class="panel-resultados">
+            <h2>Actividad actual</h2>
+
+            <div class="datos-actividad">
+                <div class="dato">
+                    <span>Tarjeta</span>
+                    <strong id="tarjetaDetectada">Ninguna</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Confianza</span>
+                    <strong id="confianza">—</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Pregunta</span>
+                    <strong id="numeroPregunta">0 de 1</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Resultado</span>
+                    <strong id="resultado">Pendiente</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Correctas</span>
+                    <strong id="correctas">0</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Incorrectas</span>
+                    <strong id="incorrectas">0</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Porcentaje</span>
+                    <strong id="porcentajeResultado">0 %</strong>
+                </div>
+
+                <div class="dato dato-puntaje">
+                    <span>Puntaje final</span>
+                    <strong id="puntajeFinal">Pendiente</strong>
+                </div>
+            </div>
+
+            <div class="pregunta-actual">
+                <span>Tipo de actividad</span>
+                <strong id="tipoActividad">—</strong>
+
+                <span>Enunciado</span>
+                <p id="preguntaActual">
+                    Todavía no se ha formulado una pregunta.
+                </p>
+            </div>
+        </section>
+
+        <section class="panel-historial">
+            <div class="encabezado-historial">
+                <div>
+                    <p class="etiqueta-seccion">Resumen pedagógico</p>
+                    <h2>Detalle de las actividades realizadas</h2>
+                </div>
+
+                <span id="cantidadHistorial" class="contador-historial">
+                    0 actividades
+                </span>
+            </div>
+
+            <div id="historialVacio" class="historial-vacio">
+                Al finalizar una actividad aparecerán aquí las preguntas,
+                las respuestas reconocidas, el resultado y la retroalimentación.
+            </div>
+
+            <div id="listaHistorial" class="lista-historial"></div>
+        </section>
+
+    </main>
+
+    <div
+        id="modalEstadisticas"
+        class="modal-estadisticas oculto"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="tituloEstadisticas"
+    >
+        <div class="modal-contenido">
+            <div class="modal-cabecera">
+                <div>
+                    <p class="etiqueta-seccion">Panel docente</p>
+                    <h2 id="tituloEstadisticas">
+                        Estadísticas de comprensión
+                    </h2>
+                </div>
+
+                <button
+                    id="cerrarEstadisticas"
+                    class="boton-cerrar"
+                    aria-label="Cerrar estadísticas"
+                >
+                    ×
+                </button>
+            </div>
+
+            <p class="nota-estadisticas">
+                Primero se muestra el resultado completo de la actividad
+                actual. Debajo aparecen las estadísticas acumuladas.
+            </p>
+
+            <section class="resumen-actividad-actual">
+                <div class="titulo-resumen-actual">
+                    <div>
+                        <p class="etiqueta-seccion">Actividad actual</p>
+                        <h3>Resultados de la actividad completa</h3>
+                    </div>
+                    <strong id="actividadEstado">Sin finalizar</strong>
+                </div>
+
+                <div class="resumen-estadisticas resumen-actual">
+                    <div class="tarjeta-estadistica">
+                        <span>Preguntas realizadas</span>
+                        <strong id="actividadPreguntas">0</strong>
+                    </div>
+
+                    <div class="tarjeta-estadistica correcta">
+                        <span>Respuestas correctas</span>
+                        <strong id="actividadCorrectas">0</strong>
+                    </div>
+
+                    <div class="tarjeta-estadistica incorrecta">
+                        <span>Respuestas incorrectas</span>
+                        <strong id="actividadIncorrectas">0</strong>
+                    </div>
+
+                    <div class="tarjeta-estadistica destacada">
+                        <span>Resultado</span>
+                        <strong id="actividadPorcentaje">0 %</strong>
+                    </div>
+                </div>
+            </section>
+
+            <h3 class="titulo-acumulado">Estadísticas acumuladas</h3>
+
+            <div class="resumen-estadisticas">
+                <div class="tarjeta-estadistica">
+                    <span>Cartas</span>
+                    <strong id="estadSesiones">0</strong>
+                </div>
+
+                <div class="tarjeta-estadistica">
+                    <span>Preguntas</span>
+                    <strong id="estadPreguntas">0</strong>
+                </div>
+
+                <div class="tarjeta-estadistica correcta">
+                    <span>Correctas</span>
+                    <strong id="estadCorrectas">0</strong>
+                </div>
+
+                <div class="tarjeta-estadistica incorrecta">
+                    <span>Incorrectas</span>
+                    <strong id="estadIncorrectas">0</strong>
+                </div>
+
+                <div class="tarjeta-estadistica destacada">
+                    <span>Desempeño global</span>
+                    <strong id="estadPorcentaje">0 %</strong>
+                </div>
+            </div>
+
+            <h3>Resultados por tarjeta</h3>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-estadisticas">
+                    <thead>
+                        <tr>
+                            <th>Tarjeta</th>
+                            <th>Cartas</th>
+                            <th>Preguntas</th>
+                            <th>Correctas</th>
+                            <th>Incorrectas</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="estadisticasPorTarjeta"></tbody>
+                </table>
+            </div>
+
+            <h3>Cartas trabajadas</h3>
+
+            <div
+                id="listaSesionesEstadisticas"
+                class="lista-sesiones-estadisticas"
+            ></div>
+
+            <div class="acciones-estadisticas">
+                <button
+                    id="botonReiniciarEstadisticas"
+                    class="boton-reiniciar-estadisticas"
+                    type="button"
+                >
+                    Reiniciar estadísticas acumuladas
+                </button>
+                <p id="mensajeReinicioEstadisticas" class="mensaje-reinicio" aria-live="polite"></p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='app.js') }}?v=20260730-final-reiniciar-estadisticas-1"
+    ></script>
+</body>
+</html>
