@@ -24,7 +24,7 @@
 
 **BúhoBot** es un robot educativo inteligente basado en **Visión por Computadora** e **Inteligencia Artificial**, diseñado para reconocer cartas pedagógicas e interactuar mediante voz con estudiantes de **Primer Año de Educación General Básica**, apoyando actividades orientadas al desarrollo de la comprensión lectora.
 
-El sistema integra un modelo de detección de objetos basado en **YOLOv8**, una aplicación web desarrollada con **Flask**, una base de conocimientos en formato **JSON**, síntesis de voz mediante **Piper TTS** y reconocimiento automático del habla mediante **Vosk**, permitiendo una interacción educativa automatizada.
+El sistema integra un modelo de detección basado en **YOLOv8**, una aplicación web desarrollada con **Flask**, una base de conocimientos en formato **JSON**, síntesis de voz mediante **Piper TTS** y reconocimiento automático del habla mediante **Vosk**, permitiendo una interacción educativa automatizada.
 
 ---
 
@@ -37,7 +37,9 @@ Desarrollar un robot educativo inteligente basado en visión por computadora e i
 # 🏗 Arquitectura general
 
 <p align="center">
+
 <img src="./1.%20Descripción%20General%20del%20Proyecto/Arquitectura_General.png" width="1000">
+
 </p>
 
 ---
@@ -71,6 +73,16 @@ El conjunto de datos fue construido específicamente para este proyecto utilizan
 - 🛒 Supermercado
 
 El dataset se encuentra organizado en formato **YOLOv8**, incluyendo los conjuntos de entrenamiento, validación y prueba.
+
+<p align="center">
+
+<a href="./1.%20Descripción%20General%20del%20Proyecto/Dataset">
+
+<img src="https://img.shields.io/badge/📂%20EXPLORAR%20DATASET-blue?style=for-the-badge">
+
+</a>
+
+</p>
 
 ---
 
@@ -133,14 +145,14 @@ Robot_Educativo_BuhoBot
 
 | Nº | Sección | Descripción |
 |:--:|---------|-------------|
-| **1** | **Descripción General del Proyecto** | Presenta el contexto del proyecto, el problema abordado, la arquitectura general del sistema y el dataset empleado para el entrenamiento del modelo de visión por computadora. |
-| **2** | **Análisis Exploratorio de Datos (EDA)** | Contiene el análisis estadístico y visual del conjunto de datos, permitiendo conocer la distribución de las clases y las características principales de las imágenes utilizadas. |
-| **3** | **Preparación y Procesamiento de Datos** | Describe el proceso de organización, limpieza, etiquetado y preparación del dataset antes del entrenamiento del modelo de inteligencia artificial. |
-| **4** | **Modelo Baseline** | Documenta la implementación del modelo inicial utilizado como punto de referencia para comparar el rendimiento obtenido durante las etapas posteriores de optimización. |
-| **5** | **Evaluación y Optimización del Modelo** | Presenta las métricas de evaluación, análisis del desempeño del modelo y las mejoras aplicadas para incrementar la precisión del sistema de detección. |
-| **6** | **Workshop Integral de Evaluación y Simulación** | Incluye las actividades académicas relacionadas con la validación experimental, simulaciones y análisis de robustez desarrollados durante el proyecto. |
-| **7** | **Optimización de Hiperparámetros y Evaluación Avanzada** | Reúne las pruebas de ajuste de hiperparámetros, comparación entre modelos y experimentos orientados a mejorar el rendimiento del sistema. |
-| **8** | **Implementación de la Demostración Funcional del Proyecto** | Contiene la aplicación web, el modelo entrenado, la base de conocimientos, el material didáctico y la memoria técnica de la demostración funcional de BúhoBot. |
+| **1** | **Descripción General del Proyecto** | Presenta el contexto del proyecto, el problema de investigación, la arquitectura general del sistema y el conjunto de datos empleado para el entrenamiento del modelo de visión por computadora. |
+| **2** | **Análisis Exploratorio de Datos (EDA)** | Contiene el análisis estadístico y visual del dataset, permitiendo conocer la distribución de las clases, la calidad de las imágenes y las características principales del conjunto de datos. |
+| **3** | **Preparación y Procesamiento de Datos** | Describe el proceso de organización, etiquetado, validación y preparación del dataset antes del entrenamiento del modelo de inteligencia artificial. |
+| **4** | **Modelo Baseline** | Documenta el entrenamiento del modelo base utilizado como referencia inicial para comparar posteriormente el impacto de las estrategias de optimización implementadas. |
+| **5** | **Evaluación y Optimización del Modelo** | Presenta las métricas de desempeño, el análisis de resultados y las mejoras aplicadas para incrementar la precisión y robustez del sistema de detección. |
+| **6** | **Workshop Integral de Evaluación y Simulación** | Reúne las actividades académicas relacionadas con la validación experimental, simulaciones y pruebas de robustez desarrolladas durante el proyecto integrador. |
+| **7** | **Optimización de Hiperparámetros y Evaluación Avanzada** | Incluye los experimentos de ajuste de hiperparámetros, comparación entre configuraciones y análisis avanzado del comportamiento del modelo entrenado. |
+| **8** | **Implementación de la Demostración Funcional del Proyecto** | Contiene la aplicación web desarrollada en Flask, el modelo entrenado, la base de conocimientos, el material didáctico y la memoria técnica utilizada durante la demostración funcional del robot. |
 
 ---
 
