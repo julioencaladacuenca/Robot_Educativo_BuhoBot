@@ -1,123 +1,181 @@
-# Robot Educativo BuhoBot
+<p align="center">
+  <img src="assets/Logo_BuhoBot.png" width="220" alt="BúhoBot">
+</p>
 
-Sistema Inteligente basado en Inteligencia Artificial, Visión por Computadora e interacción por voz para apoyar la comprensión lectora en estudiantes de Primer Año de Educación General Básica.
+<h1 align="center">🤖 Robot Educativo Inteligente BúhoBot</h1>
 
-**Proyecto de Maestría en Inteligencia Artificial**  
-**Universidad Espíritu Santo (UEES)**
+<h3 align="center">
+Proyecto Integrador de Inteligencia Artificial
+</h3>
 
----
+<p align="center">
 
-## Descripción
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-success)
+![Flask](https://img.shields.io/badge/Flask-Web_App-black)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-5-red)
+![Estado](https://img.shields.io/badge/Estado-Finalizado-brightgreen)
 
-Robot Educativo BuhoBot es un sistema educativo inteligente desarrollado para integrar tecnologías de Inteligencia Artificial en el aula. El proyecto combina visión por computadora, reconocimiento de voz y síntesis de voz para ofrecer experiencias de aprendizaje interactivas, permitiendo que los estudiantes interactúen verbalmente con un robot educativo a partir del reconocimiento automático de cartas pedagógicas.
-
-El sistema identifica el material didáctico mediante un modelo de detección de objetos basado en YOLOv8, consulta una base de conocimientos estructurada en formato JSON, formula preguntas al estudiante mediante síntesis de voz y evalúa automáticamente las respuestas utilizando reconocimiento de voz.
-
----
-
-## Objetivo
-
-Desarrollar un robot educativo basado en Inteligencia Artificial y Visión por Computadora que favorezca la comprensión lectora mediante la interacción por voz con estudiantes de Primer Año de Educación General Básica.
-
----
-
-## Características principales
-
-- Reconocimiento de cartas pedagógicas mediante Visión por Computadora.
-- Detección automática utilizando YOLOv8.
-- Síntesis de voz mediante Piper TTS.
-- Reconocimiento de voz mediante Vosk.
-- Base de conocimientos estructurada en formato JSON.
-- Evaluación automática de respuestas.
-- Retroalimentación inmediata al estudiante.
-- Registro de resultados de la interacción.
+</p>
 
 ---
 
-## Arquitectura del sistema
+# 📖 Descripción del proyecto
 
-> **Nota:** La imagen de la arquitectura será incorporada en futuras actualizaciones del repositorio.
+**BúhoBot** es un robot educativo inteligente basado en **Visión por Computadora** e **Inteligencia Artificial**, diseñado para reconocer cartas pedagógicas e interactuar mediante voz con estudiantes de **Primer Año de Educación General Básica**, apoyando actividades orientadas al desarrollo de la comprensión lectora.
 
----
-
-## Tecnologías utilizadas
-
-| Tecnología | Descripción |
-|------------|-------------|
-| Python | Lenguaje principal del proyecto |
-| Flask | Gestión y orquestación de la aplicación |
-| Raspberry Pi 5 | Plataforma de ejecución |
-| YOLOv8 | Modelo de Visión por Computadora |
-| OpenCV | Procesamiento de imágenes |
-| Piper TTS | Síntesis de voz |
-| Vosk | Reconocimiento de voz |
-| JSON | Base de conocimientos |
-| Git | Control de versiones |
-| GitHub | Gestión del repositorio |
+El sistema integra un modelo de detección de objetos basado en **YOLOv8**, una aplicación web desarrollada con **Flask**, una base de conocimientos en formato **JSON**, síntesis de voz mediante **Piper TTS** y reconocimiento automático del habla mediante **Vosk**, permitiendo una interacción educativa automatizada.
 
 ---
 
-## Flujo general del sistema
+# 🎯 Objetivo del proyecto
 
-1. Captura de la carta mediante una cámara USB.
-2. Detección automática utilizando YOLOv8.
-3. Consulta de la base de conocimientos.
-4. Generación de la historia y preguntas mediante Piper TTS.
-5. Interacción verbal con el estudiante.
-6. Conversión de voz a texto mediante Vosk.
-7. Evaluación de la respuesta.
-8. Generación de retroalimentación.
-9. Registro de resultados.
+**Desarrollar y validar un robot educativo basado en visión por computadora e inteligencia artificial para apoyar el desarrollo de la comprensión lectora en estudiantes de Primer Año de Educación General Básica, mediante el reconocimiento de cartas pedagógicas y la interacción por voz.**
 
 ---
 
-## Estructura del proyecto
+# 🏗 Arquitectura del sistema
 
-```text
-Robot_Educativo_BuhoBot/
+<p align="center">
+<img src="1. Descripción General del Proyecto/Arquitectura_General.png" width="100%" alt="Arquitectura del sistema">
+</p>
 
-├── src/                # Código fuente
-├── modelos/            # Modelos de IA
-├── conocimiento/       # Base de conocimientos
-├── imagenes/           # Recursos gráficos
-├── audios/             # Recursos de audio
-├── docs/               # Documentación
-├── resultados/         # Evidencias experimentales
-├── README.md
-├── requirements.txt
-└── LICENSE
+La aplicación está orquestada por **Flask**, que coordina la comunicación entre todos los módulos del sistema. El flujo inicia con la detección de la carta mediante **YOLOv8**, continúa con la consulta de la base de conocimientos en **JSON**, la generación del audio mediante **Piper TTS**, la captura de la respuesta del estudiante utilizando **Vosk**, la evaluación automática de la respuesta y la generación de la retroalimentación correspondiente.
+
+---
+
+# ⚙ Componentes tecnológicos del sistema
+
+| Tecnología | Función |
+|------------|---------|
+| Python | Lenguaje principal del proyecto. |
+| Flask | Framework web y orquestador de la aplicación. |
+| YOLOv8 (Ultralytics) | Reconocimiento de cartas pedagógicas mediante visión por computadora. |
+| OpenCV | Captura y procesamiento de imágenes. |
+| Piper TTS | Conversión de texto a voz. |
+| Vosk | Reconocimiento automático del habla. |
+| JSON | Base de conocimientos del robot. |
+| Roboflow | Construcción y exportación del dataset. |
+| Raspberry Pi 5 | Plataforma de ejecución. |
+| Cámara USB | Captura de las cartas pedagógicas. |
+| Micrófono USB | Captura la respuesta del estudiante. |
+| Parlante USB | Reproduce historias y retroalimentación. |
+| HTML5, CSS3 y JavaScript | Desarrollo de la interfaz web. |
+
+---
+
+# 📊 Dataset utilizado
+
+El modelo fue entrenado con un conjunto de datos propio compuesto por cinco clases:
+
+- 🏥 Hospital
+- 🏫 Escuela
+- 🌳 Parque
+- 🥖 Panadería
+- 🛒 Supermercado
+
+El dataset se encuentra organizado en formato **YOLOv8** dentro de:
+
+📁 **`1. Descripción General del Proyecto/Dataset/`**
+
+---
+
+# 📂 Estructura del repositorio
+
+| Sección | Contenido |
+|---------|-----------|
+| 📁 [1. Descripción General del Proyecto](./1.%20Descripción%20General%20del%20Proyecto/) | Arquitectura del sistema y dataset utilizado. |
+| 📁 [2. Análisis Exploratorio de Datos (EDA)](./2.%20Análisis%20Exploratorio%20de%20Datos%20(EDA)/) | Exploración y análisis del conjunto de datos. |
+| 📁 [3. Preparación y Procesamiento de Datos](./3.%20Preparación%20y%20Procesamiento%20de%20Datos/) | Limpieza, balanceo y Data Augmentation. |
+| 📁 [4. Modelo Baseline](./4.%20Modelo%20Baseline/) | Modelo de referencia para benchmarking. |
+| 📁 [5. Evaluación y Optimización del Modelo](./5.%20Evaluación%20y%20Optimización%20del%20Modelo/) | Entrenamiento y evaluación del modelo propuesto. |
+| 📁 [6. Workshop Integral de Evaluación y Simulación](./6.%20Workshop%20Integral%20de%20Evaluación%20y%20Simulación/) | Simulación y pruebas de robustez. |
+| 📁 [7. Optimización de Hiperparámetros y Evaluación Avanzada](./7.%20Optimización%20de%20Hiperparámetros%20y%20Evaluación%20Avanzada/) | Optimización avanzada del modelo. |
+| 📁 [8. Implementación de la Demostración Funcional del Proyecto](./8.%20Implementación%20de%20la%20Demostración%20Funcional%20del%20Proyecto/) | Aplicación web y demostración funcional del sistema. |
+
+---
+
+# 🚀 Ejecución del proyecto
+
+## 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/TU-USUARIO/Proyecto_Integrador_IA.git
+```
+
+## 2. Acceder a la aplicación
+
+```bash
+cd "8. Implementación de la Demostración Funcional del Proyecto/Aplicacion_Web"
+```
+
+## 3. Instalar dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Ejecutar la aplicación
+
+```bash
+python app.py
+```
+
+## 5. Abrir en el navegador
+
+```
+http://localhost:5000
 ```
 
 ---
 
-## Estado del proyecto
+# 📁 Contenido de la implementación
 
-**En desarrollo.**
+La carpeta **8. Implementación de la Demostración Funcional del Proyecto** contiene:
 
-Actualmente se encuentra implementado el flujo principal del sistema, incluyendo el reconocimiento de cartas pedagógicas mediante Visión por Computadora, la interacción por voz y la evaluación automática de respuestas.
+- 📂 **Aplicacion_Web/**
+  - `app.py`
+  - `robot_steam_final.py`
+  - `detector_frutas1.py`
+  - `detector_frutas2.py`
+  - `templates/`
+  - `static/`
+  - `requirements.txt`
+
+- 📂 **Modelo/**
+  - `best.pt`
+
+- 📂 **Base_Conocimiento/**
+  - `conocimiento.json`
+
+- 📂 **Material_Didactico/**
+  - Hospital
+  - Escuela
+  - Parque
+  - Panadería
+  - Supermercado
+
+- 📄 **Presentacion_Proyecto.pdf**
 
 ---
 
-## Trabajos futuros
-
-- Optimización del modelo de detección.
-- Incorporación de nuevos escenarios educativos.
-- Ampliación de la base de conocimientos.
-- Evaluación experimental en instituciones educativas.
-- Desarrollo de un panel de resultados para docentes.
-
----
-
-## Autores
+# 👨‍💻 Autores
 
 **Julio Encalada Cuenca**  
-Docente de la Universidad Técnica de Machala (UTMACH)
+Docente – Universidad Técnica de Machala (UTMACH)
 
 **Sara Cruz Naranjo**  
-Docente de la Universidad Técnica de Machala (UTMACH)
+Docente – Universidad Técnica de Machala (UTMACH)
 
 ---
 
-## Licencia
+# 🏛 Instituciones
 
-Este proyecto ha sido desarrollado con fines académicos, científicos y de investigación como parte de un proyecto de Maestría en Inteligencia Artificial.
+- Universidad Espíritu Santo (UEES)
+- Universidad Técnica de Machala (UTMACH)
+
+---
+
+# 📄 Licencia
+
+Repositorio desarrollado con fines académicos como parte del **Proyecto Integrador de la Maestría en Inteligencia Artificial**.
