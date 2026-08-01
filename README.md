@@ -1,6 +1,6 @@
 # Robot Educativo BuhoBot
 
-Sistema inteligente basado en Inteligencia Artificial, Visión por Computadora e interacción por voz para apoyar la comprensión lectora en estudiantes de Primer Año de Educación General Básica.
+Sistema Inteligente basado en Inteligencia Artificial, Visión por Computadora e interacción por voz para apoyar la comprensión lectora en estudiantes de Primer Año de Educación General Básica.
 
 **Proyecto de Maestría en Inteligencia Artificial**  
 **Universidad Espíritu Santo (UEES)**
